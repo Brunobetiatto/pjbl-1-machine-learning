@@ -1,10 +1,147 @@
 from algoritmos_class import train_and_test_classifier
-import pandas as pd
+from algoritmos_class import train_and_test_regressor
 
-dataset = pd.read_csv("datasets/synthetic_coffee_health_10000.csv")
 
-print(dataset.columns)
+# === chamama dos modelos de regressão ===
+"""
+res_knn_regression = train_and_test_regressor(
+    model_name="knn",
+    csv_path="datasets/IRIS.csv",
+    feature_columns=['sepal_length','sepal_width','petal_length'],
+    target_column='petal_width',
+    random_state=42,
+    model_params='auto',
+    train_size=0.65,
+    verbose=True,
+    compute_importance=False,
+    validation_method='k_fold'
+)
 
+res_rf_regression = train_and_test_regressor(
+    model_name="random_forest",
+    csv_path="datasets/IRIS.csv",
+    feature_columns=['sepal_length','sepal_width','petal_length'],
+    target_column='petal_width',
+    random_state=42,
+    model_params='auto',
+    train_size=0.65,
+    verbose=True,
+    compute_importance=False,
+    validation_method='k_fold'
+)
+
+res_linear_regression = train_and_test_regressor(
+    model_name="linear_regression",
+    csv_path="datasets/IRIS.csv",
+    feature_columns=['sepal_length'],
+    target_column='petal_width',
+    random_state=42,
+    model_params='auto',
+    train_size=0.65,
+    verbose=True,
+    compute_importance=False,
+    validation_method='k_fold'
+)
+
+res_decision_tree = train_and_test_regressor(
+    model_name="decision_tree",
+    csv_path="datasets/IRIS.csv",
+    feature_columns=['sepal_length','sepal_width','petal_length'],
+    target_column='petal_width',
+    random_state=42,
+    model_params='auto',
+    train_size=0.65,
+    verbose=True,
+    compute_importance=False,
+    validation_method='k_fold'
+)
+
+res_mlp = train_and_test_regressor(
+    model_name="mlp",
+    csv_path="datasets/IRIS.csv",
+    feature_columns=['sepal_length','sepal_width','petal_length'],
+    target_column='petal_width',
+    random_state=42,
+    model_params='auto',
+    train_size=0.65,
+    verbose=True,
+    compute_importance=False,
+    validation_method='k_fold'
+)
+"""
+
+"""
+res_svr = train_and_test_regressor(
+    model_name="svm",
+    csv_path="datasets/IRIS.csv",
+    feature_columns=['sepal_length','sepal_width','petal_length'],
+    target_column='petal_width',
+    random_state=42,
+    model_params='auto',
+    train_size=0.65,
+    verbose=True,
+    compute_importance=False,
+    validation_method='k_fold'
+)   
+
+res_ensemble_regression = train_and_test_regressor(
+    model_name="ensemble",
+    csv_path="datasets/IRIS.csv",
+    feature_columns=['sepal_length','sepal_width','petal_length'],
+    target_column='petal_width',
+    random_state=42,
+    model_params='auto',
+    train_size=0.65,
+    verbose=True,
+    compute_importance=False,
+    validation_method='k_fold'
+)
+
+res_bagging_regression = train_and_test_regressor(
+    model_name="bagging",
+    csv_path="datasets/IRIS.csv",
+    feature_columns=['sepal_length','sepal_width','petal_length'],
+    target_column='petal_width',
+    random_state=42,
+    model_params='auto',
+    train_size=0.65,
+    verbose=True,
+    compute_importance=False,
+    validation_method='k_fold'
+)
+
+
+
+res_stacking_regression = train_and_test_regressor(
+    model_name="stacking",
+    csv_path="datasets/IRIS.csv",
+    feature_columns=['sepal_length','sepal_width','petal_length'],
+    target_column='petal_width',
+    random_state=42,
+    model_params='auto',
+    train_size=0.65,
+    verbose=True,
+    compute_importance=False,
+    validation_method='k_fold'
+)
+
+"""
+
+res_bagging_regression = train_and_test_regressor(     
+    model_name="bagging",
+    csv_path="datasets/IRIS.csv",
+    feature_columns=['sepal_length','sepal_width','petal_length'],
+    target_column='petal_width',
+    random_state=42,
+    model_params='auto',
+    train_size=0.65,
+    verbose=True,
+    compute_importance=False,
+    validation_method='k_fold'
+)
+
+"""
+# == chamado de modelos de classificação ==
 
 # === chama os dois modelos e guarda resultados ===
 res_knn = train_and_test_classifier(
@@ -53,7 +190,7 @@ res_rf = train_and_test_classifier(
     verbose=True,
     compute_importance=False
 )
-"""
+
 res_svm = train_and_test_classifier(
     model_name="svm",
     csv_path="datasets/synthetic_coffee_health_10000.csv",
