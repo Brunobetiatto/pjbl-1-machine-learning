@@ -1,8 +1,144 @@
 from algoritmos_class import train_and_test_classifier
 from algoritmos_class import train_and_test_regressor
 
+res_knn_regression = train_and_test_regressor(
+    model_name="knn",
+    csv_path="datasets/IRIS.csv",
+    feature_columns=['sepal_length','sepal_width','petal_length'],
+    target_column='petal_width',
+    random_state=42,
+    model_params='auto',
+    train_size=0.65,
+    verbose=True,
+    compute_importance=False,
+    validation_method='holdout'
+)
 
-# === chamama dos modelos de regressão ===
+res_rf_regression = train_and_test_regressor(
+    model_name="random_forest",
+    csv_path="datasets/IRIS.csv",
+    feature_columns=['sepal_length','sepal_width','petal_length'],
+    target_column='petal_width',
+    random_state=42,
+    model_params='auto',
+    train_size=0.65,
+    verbose=True,
+    compute_importance=False,
+    validation_method='holdout'
+)
+
+res_linear_regression = train_and_test_regressor(
+    model_name="linear_regression",
+    csv_path="datasets/IRIS.csv",
+    feature_columns=['sepal_length'],
+    target_column='petal_width',
+    random_state=42,
+    model_params='auto',
+    train_size=0.65,
+    verbose=True,
+    compute_importance=False,
+    validation_method='holdout'
+)
+
+res_decision_tree = train_and_test_regressor(
+    model_name="decision_tree",
+    csv_path="datasets/IRIS.csv",
+    feature_columns=['sepal_length','sepal_width','petal_length'],
+    target_column='petal_width',
+    random_state=42,
+    model_params='auto',
+    train_size=0.65,
+    verbose=True,
+    compute_importance=False,
+    validation_method='holdout'
+)
+
+res_mlp = train_and_test_regressor(
+    model_name="mlp",
+    csv_path="datasets/IRIS.csv",
+    feature_columns=['sepal_length','sepal_width','petal_length'],
+    target_column='petal_width',
+    random_state=42,
+    model_params='auto',
+    train_size=0.65,
+    verbose=True,
+    compute_importance=False,
+    validation_method='holdout'
+)
+
+res_svr = train_and_test_regressor(
+    model_name="svm",
+    csv_path="datasets/IRIS.csv",
+    feature_columns=['sepal_length','sepal_width','petal_length'],
+    target_column='petal_width',
+    random_state=42,
+    model_params='auto',
+    train_size=0.65,
+    verbose=True,
+    compute_importance=False,
+    validation_method='holdout'
+)   
+
+res_ensemble_regression = train_and_test_regressor(
+    model_name="ensemble",
+    csv_path="datasets/IRIS.csv",
+    feature_columns=['sepal_length','sepal_width','petal_length'],
+    target_column='petal_width',
+    random_state=42,
+    model_params='auto',
+    train_size=0.65,
+    verbose=True,
+    compute_importance=False,
+    validation_method='holdout'
+)
+
+res_bagging_regression = train_and_test_regressor(
+    model_name="bagging",
+    csv_path="datasets/IRIS.csv",
+    feature_columns=['sepal_length','sepal_width','petal_length'],
+    target_column='petal_width',
+    random_state=42,
+    model_params='auto',
+    train_size=0.65,
+    verbose=True,
+    compute_importance=False,
+    validation_method='holdout'
+)
+
+
+
+res_stacking_regression = train_and_test_regressor(
+    model_name="stacking",
+    csv_path="datasets/IRIS.csv",
+    feature_columns=['sepal_length','sepal_width','petal_length'],
+    target_column='petal_width',
+    random_state=42,
+    model_params='auto',
+    train_size=0.65,
+    verbose=True,
+    compute_importance=False,
+    validation_method='holdout'
+)
+
+
+
+res_bagging_regression = train_and_test_regressor(     
+    model_name="bagging",
+    csv_path="datasets/IRIS.csv",
+    feature_columns=['sepal_length','sepal_width','petal_length'],
+    target_column='petal_width',
+    random_state=42,
+    model_params='auto',
+    train_size=0.65,
+    verbose=True,
+    compute_importance=False,
+    validation_method='holdout'
+)
+
+
+
+# === chamama dos modelos de regressão k-fold ===
+
 
 res_knn_regression = train_and_test_regressor(
     model_name="knn",
