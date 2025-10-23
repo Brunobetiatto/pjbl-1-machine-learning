@@ -994,20 +994,20 @@ def train_and_test_regressor(
                 'svr__kernel': ['rbf', 'linear', 'poly'],
 
                 # C em escala log (regularização): do muito fraco ao muito forte
-                'svr__C': [1e-3, 1e-2, 1e-1, 1, 10, 100, 1e3],
+                'svr__C': [1e-3, 1e-2, 1e-1, 1, 10],
 
                 # gamma para RBF/poly: testar 'scale' e valores explícitos em ordens de magnitude
-                'svr__gamma': ['scale', 'auto', 1e-3, 1e-2, 1e-1, 1, 10],
+                'svr__gamma': ['scale', 'auto', 1e-3, 1e-2, 1e-1, 1],
 
                 # epsilon (tamanho da zona insensível): valores pequenos para regressão precisa
-                'svr__epsilon': [1e-4, 1e-3, 1e-2, 0.05, 0.1, 0.5, 1.0],
+                'svr__epsilon': [1e-4, 1e-3, 1e-2, 0.05],
 
                 # parâmetros para kernel polinomial (somente usados se kernel='poly')
                 'svr__degree': [2, 3, 4],
-                'svr__coef0': [0.0, 0.1, 0.5, 1.0],
+                'svr__coef0': [0.0, 0.1, 0.5],
 
                 # tolerância e número de iterações podem ajudar convergência
-                'svr__tol': [1e-4, 1e-3, 1e-2],
+                'svr__tol': [1e-4, 1e-3],
                 'svr__max_iter': [-1]  # -1 = sem limite; altere se precisar de limites
             },
             'decision_tree': {

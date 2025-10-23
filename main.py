@@ -3,7 +3,7 @@ from algoritmos_class import train_and_test_regressor
 
 
 # === chamama dos modelos de regressão ===
-"""
+
 res_knn_regression = train_and_test_regressor(
     model_name="knn",
     csv_path="datasets/IRIS.csv",
@@ -68,9 +68,7 @@ res_mlp = train_and_test_regressor(
     compute_importance=False,
     validation_method='k_fold'
 )
-"""
 
-"""
 res_svr = train_and_test_regressor(
     model_name="svm",
     csv_path="datasets/IRIS.csv",
@@ -125,7 +123,7 @@ res_stacking_regression = train_and_test_regressor(
     validation_method='k_fold'
 )
 
-"""
+
 
 res_bagging_regression = train_and_test_regressor(     
     model_name="bagging",
@@ -140,7 +138,7 @@ res_bagging_regression = train_and_test_regressor(
     validation_method='k_fold'
 )
 
-"""
+
 # == chamado de modelos de classificação ==
 
 # === chama os dois modelos e guarda resultados ===
@@ -334,4 +332,4 @@ res = train_and_test_classifier(
     compute_importance=False,
     verbose=True
 )
-"""
+
